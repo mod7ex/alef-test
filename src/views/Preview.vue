@@ -1,33 +1,35 @@
 <template>
       <Base>
-            <div class="data">
-                  <div class="person">
-                        <p class="title">Персональные данные</p>
+            <div class="data-preview center-min">
+                  <PreviewSection name="Персональные данные" class="person">
                         <h5>{{ person_preview }}</h5>
-                  </div>
+                  </PreviewSection>
 
-                  <div class="kids">
-                        <p class="title">Дети</p>
+                  <PreviewSection name="Персональные данные" class="kids">
                         <h5
                               class="kid"
-                              v-for="(preview, i) in kids_preview"
+                              v-for="(kid_preview, i) in kids_preview"
                               :key="i"
                         >
-                              {{ preview }}
+                              {{ kid_preview }}
                         </h5>
-                  </div>
+                  </PreviewSection>
             </div>
       </Base>
 </template>
 
 <script>
+import PreviewSection from "../layouts/PreviewSection.vue";
+
 import { computed } from "vue";
 import { useStore } from "vuex";
 
 export default {
       name: "Preview",
 
-      components: {},
+      components: {
+            PreviewSection,
+      },
 
       setup() {
             let store = useStore();
@@ -44,13 +46,7 @@ export default {
 </script>
 
 <style lang="scss">
-.data {
-      @include center($base-width);
-
-      p.title {
-            margin-bottom: 1em;
-      }
-
+.data-preview {
       h5 {
             font-weight: 700;
       }

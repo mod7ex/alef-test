@@ -1,6 +1,6 @@
 <template>
       <Base>
-            <div class="form">
+            <div class="form center-min">
                   <div class="form-section">
                         <PersonForm />
                   </div>
@@ -10,7 +10,7 @@
                   </div>
 
                   <div class="form-section">
-                        <BaseButton v-fill="true" @click="saveForm">
+                        <BaseButton v-fill="true" @click="saveData">
                               Сохранить
                         </BaseButton>
                   </div>
@@ -31,13 +31,13 @@ export default {
       setup() {
             let store = useStore();
 
-            let saveForm = () => {
+            let saveData = () => {
                   store.dispatch("save_kids");
                   store.dispatch("save_person");
             };
 
             return {
-                  saveForm,
+                  saveData,
             };
       },
 };
@@ -45,8 +45,6 @@ export default {
 
 <style lang="scss">
 .form {
-      @include center($base-width);
-
       .form-section {
             margin-bottom: 2em;
 

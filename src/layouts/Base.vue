@@ -33,3 +33,13 @@ export default {
       },
 };
 </script>
+
+<style lang="scss">
+main {
+      .container {
+            .center-min {
+                  @include center($base-width);
+            }
+      }
+}
+</style>
