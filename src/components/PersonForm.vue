@@ -1,6 +1,6 @@
 <template>
       <div class="form-head">
-            <h3>Персональные данные</h3>
+            <h4>Персональные данные</h4>
       </div>
 
       <BaseInput label="Имя" v-model.trim="person.name" />

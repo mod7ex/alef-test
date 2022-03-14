@@ -18,6 +18,9 @@ footer {
       .container {
             padding: 2em !important;
             text-align: center;
+            h6 {
+                  font-weight: 400;
+            }
       }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
       <div class="form-head">
-            <h3>Дети (макс. 5)</h3>
+            <h4>Дети (макс. 5)</h4>
 
             <BaseButton v-if="allowAdding" @click="addNewKid">
                   <img src="../assets/svg/plus.svg" />

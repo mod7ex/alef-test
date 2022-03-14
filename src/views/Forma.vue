@@ -59,6 +59,10 @@ export default {
             .form-head {
                   @include flex($justify: space-between);
                   padding: 1em 0;
+
+                  h4 {
+                        font-weight: 500;
+                  }
             }
 
             .kid {

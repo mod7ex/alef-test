@@ -30,11 +30,17 @@ export default createStore({
 
       getters: {
             kids_preview(state) {
-                  return state.kids.map((kid) => `${kid.name}, ${kid.age} лет`);
+                  return state.kids.map(
+                        (kid) =>
+                              `${kid.name}${kid.age ? `, ${kid.age} лет` : ""}`
+                  );
             },
 
             person_preview(state) {
-                  return `${state.person.name}, ${state.person.age} лет`;
+                  if (!state.person.name) return "";
+                  return `${state.person.name}${
+                        state.person.age ? `, ${state.person.age} лет` : ""
+                  }`;
             },
       },
 

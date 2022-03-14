@@ -51,6 +51,10 @@ export default {
             margin-bottom: 1em;
       }
 
+      h5 {
+            font-weight: 700;
+      }
+
       .person {
             margin-bottom: 3em;
       }
