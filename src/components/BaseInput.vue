@@ -50,8 +50,9 @@ export default {
 
       label {
             color: $second-gray;
+            font-size: 1rem * 0.8125;
             input {
-                  background-color: transparent;
+                  width: 100%;
                   display: block;
                   outline: none;
                   border: none;

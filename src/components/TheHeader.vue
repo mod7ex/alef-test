@@ -1,21 +1,21 @@
 <template>
       <header>
             <div class="container">
-                  <h1>
+                  <h1 class="logo">
                         <img src="../assets/svg/logo.svg" />
                   </h1>
 
                   <ul class="nav">
                         <li>
-                              <router-link :to="{ name: 'Forma' }"
-                                    >forma</router-link
-                              >
+                              <router-link :to="{ name: 'Forma' }">
+                                    Форма
+                              </router-link>
                         </li>
 
                         <li>
-                              <router-link :to="{ name: 'Preview' }"
-                                    >preview</router-link
-                              >
+                              <router-link :to="{ name: 'Preview' }">
+                                    Превью
+                              </router-link>
                         </li>
                   </ul>
             </div>
@@ -35,6 +35,10 @@ header {
       .container {
             @include flex($justify: flex-start);
 
+            .logo {
+                  @include flex();
+            }
+
             .nav {
                   flex-grow: 1;
                   @include flex();
@@ -43,6 +47,7 @@ header {
                         margin: 0 0.5em;
 
                         a {
+                              font-size: 1rem * 0.875;
                               color: $second-gray;
                         }
                   }

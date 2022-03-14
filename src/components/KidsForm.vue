@@ -8,22 +8,18 @@
             </BaseButton>
       </div>
 
-      <!-- kids goes here -->
+      <!-- kids list goes here -->
 
-      <div class="kids">
-            <div class="kid" v-for="kid in kids" :key="kid.key">
-                  <BaseInput label="Имя" v-model.trim="kid.name" />
+      <div class="kid" v-for="(kid, i) in kids" :key="kid.key">
+            <BaseInput label="Имя" v-model.trim="kid.name" :name="'name' + i" />
 
-                  <BaseInput
-                        label="Возраст"
-                        name="age"
-                        v-model.trim="kid.age"
-                  />
+            <BaseInput
+                  label="Возраст"
+                  :name="'age' + i"
+                  v-model.trim="kid.age"
+            />
 
-                  <a href="javascript:void(0)" @click="dropKid(kid.key)"
-                        >Удалить</a
-                  >
-            </div>
+            <a href="javascript:void(0)" @click="dropKid(kid.key)">Удалить</a>
       </div>
 </template>
 
@@ -61,5 +57,3 @@ export default {
       },
 };
 </script>
-
-<style lang="scss"></style>
