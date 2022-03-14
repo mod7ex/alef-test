@@ -1,0 +1,19 @@
+import Base from "../layouts/Base.vue";
+import BaseInput from "../components/BaseInput.vue";
+import BaseButton from "../components/BaseButton.vue";
+
+const basePlugin = {
+      install(app, options) {
+            app.component("Base", Base);
+            app.component("BaseInput", BaseInput);
+            app.component("BaseButton", BaseButton);
+
+            app.directive("fill", (el, binding, vnode) => {
+                  if (!binding.value) return;
+                  el.style.backgroundColor = "#01a7fd";
+                  el.style.color = "#fff";
+            });
+      },
+};
+
+export default basePlugin;
